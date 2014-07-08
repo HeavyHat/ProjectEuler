@@ -16,6 +16,7 @@ public class ex9 extends ProjectEulerSolution
             && (int)Math.pow(triplet.getFirst(),2) + (int)Math.pow(triplet.getSecond(),2) == (int)Math.pow(triplet.getThird(),2);
   }
 
+  @Override
   public void run(String[] args)
   {
     //argument number check

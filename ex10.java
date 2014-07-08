@@ -8,6 +8,7 @@ public class ex10 extends ProjectEulerSolution
     description = "Summation of primes";
   }
 
+  @Override
   public void run(String[] args)
   {
     //argument number check
