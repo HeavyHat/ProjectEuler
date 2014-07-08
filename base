@@ -1,0 +1,14 @@
+public class @1
+{
+  // See Readme for description system
+  private final static String description = "@2";
+  public static String getDescription()
+  {
+    return description;
+  }
+
+  public static void main(String[] args)
+  {
+    
+  }
+}
