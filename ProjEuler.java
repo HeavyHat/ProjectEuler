@@ -10,20 +10,29 @@ public class ProjEuler
     try
     {
       int number = Integer.parseInt(args[0]);
-      Class<?> solution = Class.forName("ex" + number);
-      Method mainMethod = solution.getMethod("main", String[].class);
-      Method descMethod = solution.getMethod("getDescription");
-      String description = (String)descMethod.invoke(null);
-      long startTime = System.currentTimeMillis();
-      System.out.println("=== Excercise " + args[0] + " - " + description +  " ===\n");
-      if(args.length > 1)
+      Class<?> currentSolution = Class.forName("ex" + number);
+      Class<?> solution = Class.forName("ProjectEulerSolution");
+      if(currentSolution.getSuperclass() == solution)
       {
-        mainMethod.invoke(null,(Object) Arrays.copyOfRange(args, 1, args.length));
+        ProjectEulerSolution thisSolution = (ProjectEulerSolution)currentSolution.newInstance();
+        long startTime = System.currentTimeMillis();
+        Method descMethod = currentSolution.getMethod("getDescription");
+        String description = (String)descMethod.invoke(thisSolution);
+        System.out.println("=== Excercise " + args[0] + " - " + description +  " ===\n");
+        Method mainMethod = currentSolution.getMethod("run", String[].class);
+        if(args.length > 1)
+        {
+          mainMethod.invoke(thisSolution,(Object) Arrays.copyOfRange(args, 1, args.length));
+        }
+        else
+          mainMethod.invoke(thisSolution,(Object) new String[0]);
+        long endTime = System.currentTimeMillis();
+        System.out.println("\n=== Time Taken: " + String.format("%10.2f",((endTime - startTime)/100.0F)) + " ===");
       }
       else
-        mainMethod.invoke(null,(Object) new String[0]);
-      long endTime = System.currentTimeMillis();
-      System.out.println("\n=== Time Taken: " + String.format("%10.2f",((endTime - startTime)/100.0F)) + " ===");
+      {
+        System.out.println("Not a Project Euler solution.");
+      }
 
     }
     catch(ClassNotFoundException exception)
@@ -41,6 +50,10 @@ public class ProjEuler
       System.err.println(exception.getCause());
     }
     catch(InvocationTargetException exception)
+    {
+      System.err.println(exception.getCause());
+    }
+    catch(InstantiationException exception)
     {
       System.err.println(exception.getCause());
     }

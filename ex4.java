@@ -1,14 +1,10 @@
 import java.util.TreeSet;
 
-public class ex4
+public class ex4 extends ProjectEulerSolution
 {
-
-  // See Readme for description system
-  private final static String description = "Largest Palindrome Product";
-  
-  public static String getDescription()
+  public ex4()
   {
-    return description;
+    description = "Largest Palindrome Product";
   }
 
   // Calculates whther a string is a palindrome
@@ -24,7 +20,8 @@ public class ex4
       return false;
   }
 
-  public static void main(String[] args)
+  @Override
+  public void run(String[] args)
   {
     int numberOfDigits = Integer.parseInt(args[0]);
     int upperBound = new Double(Math.pow(Math.pow(10,  numberOfDigits) - 1, 2)).intValue();

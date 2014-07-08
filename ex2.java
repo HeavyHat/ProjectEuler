@@ -1,15 +1,13 @@
-public class ex2
+public class ex2 extends ProjectEulerSolution
 {
 
-  // See Readme for description system
-  private final static String description = "Even Fibonacci numbers";
-
-  public static String getDescription()
+  public ex2()
   {
-    return description;
+    description = "Even Fibonacci numbers";
   }
 
-  public static void main(String[] args)
+  @Override
+  public void run(String[] args)
   {
     int currentValue, previousValue;
     int tempValue;

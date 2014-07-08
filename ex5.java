@@ -1,15 +1,13 @@
-public class ex5
+public class ex5 extends ProjectEulerSolution
 {
 
   // See Readme for description system
-  private final static String description = "Smallest multiple";
-  
-  public static String getDescription()
-  {
-    return description;
-  }
+  public ex5()
+  { 
+    description = "Smallest multiple";
+  } 
 
-  public static int upperBound;
+  public int upperBound;
 
   // returns whether a number is divisible by a given factor
   public static boolean isntDivisible(int number,int factor)
@@ -17,7 +15,8 @@ public class ex5
     return (number % factor == 0);
   }
 
-  public static void main(String[] args)
+  @Override
+  public void run(String[] args)
   {
     int currentNumber = 1; 
     upperBound = Integer.parseInt(args[0]);

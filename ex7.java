@@ -1,12 +1,10 @@
-public class ex7
+public class ex7 extends ProjectEulerSolution
 {
 
   // See Readme for description system
-  private final static String description = "10001st prime";
-  
-  public static String getDescription()
+  public ex7()
   {
-    return description;
+    description = "10001st prime";
   }
 
   //returns true if prime
@@ -23,7 +21,8 @@ public class ex7
     return prime;
   }
 
-  public static void main(String[] args)
+  @Override
+  public void run(String[] args)
   {
     int primeNumberToBeFound = Integer.parseInt(args[0]);
     int currentPrimeNo = 1;

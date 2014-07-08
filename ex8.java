@@ -1,15 +1,14 @@
-public class ex8
+public class ex8 extends ProjectEulerSolution
 {
 
   // See Readme for description system
-  private final static String description = "Largest product in a series";
-  
-  public static String getDescription()
-  {
-    return description;
+  public ex8()
+  { 
+    description = "Largest product in a series";
   }
 
-  public static void main(String[] args)
+  @Override
+  public void run(String[] args)
   {
     int length = Integer.parseInt(args[0]);
     String fullNumber = args[1];

@@ -1,17 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class ex1
+public class ex1 extends ProjectEulerSolution
 {
-
-  // See Readme for description system
-  private final static String description = "Multiples of 3 and 5";
-  public static String getDescription()
+  public ex1()
   {
-    return description;
+    description = "Multiples of 3 and 5";
   }
 
-  public static void main(String[] args)
+  @Override
+  public void run(String[] args)
   {
     int upperBound = Integer.parseInt(args[0]) - 1;
     List<Integer> listOfMultiples = new ArrayList<Integer>();

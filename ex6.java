@@ -1,12 +1,10 @@
-public class ex6
+public class ex6 extends ProjectEulerSolution
 {
 
   // See Readme for description system
-  private final static String description = "Sum square Difference";
-  
-  public static String getDescription()
+  public ex6()
   {
-    return description;
+    description = "Sum square Difference";
   }
 
   //squares two numbers 
@@ -15,7 +13,8 @@ public class ex6
     return number * number;
   }
 
-  public static void main(String[] args)
+  @Override
+  public void run(String[] args)
   {
     int upperBound = Integer.parseInt(args[0]);
     int sumOfTerms = upperBound*(upperBound + 1)/2;

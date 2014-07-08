@@ -1,17 +1,14 @@
 import java.math.BigInteger;
 
-public class ex3
+public class ex3 extends ProjectEulerSolution
 {
-
-  // See Readme for description system
-  private final static String description = "Largest Prime Factor";
-  
-  public static String getDescription()
+  public ex3()
   {
-    return description;
+    description = "Largest Prime Factor";
   }
 
-  public static void main(String[] args)
+  @Override
+  public void run(String[] args)
   {
     BigInteger number = new BigInteger(args[0]);
     Integer greatestDivisor = 2;
