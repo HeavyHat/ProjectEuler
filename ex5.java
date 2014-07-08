@@ -4,7 +4,7 @@ public class ex5
   // See Readme for description system
   private final static String description = "Smallest multiple";
   
-  public String getDescription()
+  public static String getDescription()
   {
     return description;
   }

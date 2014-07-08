@@ -4,7 +4,7 @@ public class ex2
   // See Readme for description system
   private final static String description = "Even Fibonacci numbers";
 
-  public String getDescription()
+  public static String getDescription()
   {
     return description;
   }

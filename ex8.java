@@ -4,7 +4,7 @@ public class ex8
   // See Readme for description system
   private final static String description = "Largest product in a series";
   
-  public String getDescription()
+  public static String getDescription()
   {
     return description;
   }

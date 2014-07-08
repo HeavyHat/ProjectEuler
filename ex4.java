@@ -6,7 +6,7 @@ public class ex4
   // See Readme for description system
   private final static String description = "Largest Palindrome Product";
   
-  public String getDescription()
+  public static String getDescription()
   {
     return description;
   }

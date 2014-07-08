@@ -6,7 +6,7 @@ public class ex3
   // See Readme for description system
   private final static String description = "Largest Prime Factor";
   
-  public String getDescription()
+  public static String getDescription()
   {
     return description;
   }

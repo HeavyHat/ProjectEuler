@@ -15,7 +15,7 @@ public class ProjEuler
       Method descMethod = solution.getMethod("getDescription");
       String description = (String)descMethod.invoke(null);
       long startTime = System.currentTimeMillis();
-      System.out.println("=== Excercise " + args[0] + " - " + description +  " ===");
+      System.out.println("=== Excercise " + args[0] + " - " + description +  " ===\n");
       if(args.length > 1)
       {
         mainMethod.invoke(null,(Object) Arrays.copyOfRange(args, 1, args.length));
@@ -23,6 +23,7 @@ public class ProjEuler
       else
         mainMethod.invoke(null,(Object) new String[0]);
       long endTime = System.currentTimeMillis();
+      System.out.println("\n=== Time Taken: " + String.format("%10.2f",((endTime - startTime)/100.0F)) + " ===");
 
     }
     catch(ClassNotFoundException exception)

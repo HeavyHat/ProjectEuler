@@ -4,7 +4,7 @@ public class ex6
   // See Readme for description system
   private final static String description = "Sum square Difference";
   
-  public String getDescription()
+  public static String getDescription()
   {
     return description;
   }
