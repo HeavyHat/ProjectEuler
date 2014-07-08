@@ -1,7 +1,0 @@
-#!/bin/bash
-
-EXCERCISE="ex$1";
-DESCRIPTION=$2;
-
-touch "$EXCERCISE.java"
-sed "s//g" 
