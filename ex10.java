@@ -10,6 +10,9 @@ public class ex10 extends ProjectEulerSolution
 
   public void run(String[] args)
   {
+    //argument number check
+    if(args.length != 1)
+      throw new IllegalArgumentException("You must provide precisly 1 argument. Provided " + args.length);
     //the upperbound of the prime numbers to be summed
     int upperBound = Integer.parseInt(args[0]);
     //map of all the integers up to this number corresponding to a bool that indicates whether its is prime
