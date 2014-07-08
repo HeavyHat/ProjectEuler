@@ -1,1 +1,22 @@
-Description provide the corrent excercise title for the project euler class.
+Project Euler Implementation
+
+Each program is contained within its own class ex<excercise number>.java, with the following structure:
+
+public ex? extends ProjectEulerSolution
+{
+  public ex?()
+  {
+    decription = "<Decription>";
+  }
+
+  public void run(String[] args)
+  {
+    //implementation
+  }
+}
+
+Every excercise should therefore be launched through the ProjEuler class in the following fashion:
+
+ProjEuler <Excercise Number> <CMD Arguments>
+
+This will then provide the time taken for each excercise as well as a description.
