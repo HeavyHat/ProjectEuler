@@ -35,7 +35,7 @@ public class ProjEuler
           mainMethod.invoke(thisSolution,(Object) new String[0]);
         long endTime = System.currentTimeMillis();
         //prints the time taken in seconds
-        System.out.println("\n=== Time Taken: " + String.format("%10.2f",((endTime - startTime)/100.0F)) + " ===");
+        System.out.println("\n=== Time Taken: " + String.format("%10.2f",((endTime - startTime)/1000.0F)) + " ===");
       }
       else
       {
