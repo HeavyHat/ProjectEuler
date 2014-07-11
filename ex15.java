@@ -43,6 +43,9 @@ public class ex15 extends ProjectEulerSolution
   @Override
   public void run(String[] args)
   {
+    //argument number check
+    if(args.length != 1)
+      throw new IllegalArgumentException("You must provide only one argument. Provided " + args.length);
     int gridSize = Integer.parseInt(args[0]);
     System.out.println(calculatePathsIterativly(gridSize));
   }

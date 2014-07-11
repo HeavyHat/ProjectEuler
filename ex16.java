@@ -8,6 +8,6 @@ public class ex16 extends ProjectEulerSolution
   @Override 
   public void run(String[] args)
   {
-    
+    int powerOfTwo = Integer.parseInt(args[0]);
   }
 }
