@@ -5,7 +5,7 @@ public class Number
   public static final String[] TYS = {"twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 
   private Number subNumber = null;
-  private String longNumber = new String("");
+  private String longNumber;
 
   public Number(String number)
   {
@@ -40,7 +40,7 @@ public class Number
               if(number.charAt(1) != '0' && number.charAt(2) != '0' && number.charAt(3) != '0')
                 subNumber = new Number(number.substring(1,4));
               break;
-      default: longNumber = "";
+      default: ;
               break;
     }
   }
@@ -49,7 +49,7 @@ public class Number
   {
     if(longNumber != null && longNumber != "")
     {
-      String longNumber = longNumber.replace(" ", "");
+      longNumber = longNumber.replace(" ", "");
       return longNumber.length() + (subNumber != null ? subNumber.getNumberOfLetters() : 0);
     }
     else
@@ -61,7 +61,6 @@ public class Number
   @Override
   public String toString()
   {
-    System.out.println("bang2");
     if(subNumber == null)
       return longNumber;
     else

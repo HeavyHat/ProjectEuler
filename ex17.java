@@ -13,6 +13,11 @@ public class ex17 extends ProjectEulerSolution
   @Override
   public void run(String[] args)
   {
-    System.out.println(new Number(args[0]));
+    long sum = 0;
+    for(int currentNumber = 1; currentNumber < Integer.parseInt(args[0]); currentNumber++)
+    {
+      sum += new Number("" + currentNumber).getNumberOfLetters();
+    }
+    System.out.println(sum);
   }
 }
